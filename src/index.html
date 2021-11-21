@@ -13,8 +13,26 @@
     <title>Proyecto</title>
 </head>
 <body>
-    <main>
+    <header>
         <h1>Interpolación por Polinomio de Lagrange</h1>
+    </header>
+    <main>
+        <section class="instructions">
+            <h3>Instrucciones de Uso:</h3>
+            <ol>
+                <li>Selecciona el tamaño de la tabla (minimo 3 registros, maximo 4 registros).</li>
+                <li>
+                    En el campo de consultas puedes ingresar los valores de interes, puedes realizar más de una consulta
+                    a la vez, solo separa cada consulta con un espacio o dejalo en blanco si no deseas realizar
+                    ninguna consulta. Ejemplo: 1 2 3 4 5 6
+                </li>
+                <li>Llena la tabla de registros.</li>
+                <li>
+                    Si deseas realizar otro ejercicio el boton Limpiar puede serte útil, este no modificara el tamaño de 
+                    tabla que tengas seleccionado.
+                </li>
+            </ol>
+        </section>
         <section class="selector">
             <p class="opcion_label">Selecciona una opción:</p>
             <p class="consultas_label">Consultas:</p>
@@ -38,9 +56,19 @@
             <input type="number" class="y3" placeholder="Valor y3">
         </section>
         <section class="resultados">
-            <p class="polinomio"></p>
-            <p class="consultas"></p>
+            <p class="polinomio">Función:</p>
+            <p class="consultas">Consultas:</p>
         </section>
     </main>
+    <footer>
+        <h3 class="final_title">Proyecto Métodos Numericos</h3>
+        <p class="t1">Castillo Sánchez Yael Aram</p>
+        <p class="t2">Hernández Soledad Angel Agustin</p>
+        <p class="t3">García Cordova Montserrat</p>
+        <p class="bug_report">
+            ¿Encontraste algún problema? Comentanos 
+            <a href="mailto:yaelaram@gmail.com?subject=Bug Report Proyecto Metodos Numericos">aquí</a>
+        </p>
+    </footer>
 </body>
 </html>

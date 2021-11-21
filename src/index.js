@@ -34,6 +34,7 @@ const getValues = () => valores.value.split( ' ' ).map( element => +( element ) 
 const computeResult = () => {
     let datos = getData(),
         fun = undefined;
+    const numberStyle = new Intl.NumberFormat( 'es-MX', { style: 'decimal', maximumFractionDigits: 4 } );
     if( numero_datos === 3 ) 
         fun = new Polinomio( [ term_cuadrado_cubo( datos, numero_datos ), term_lineal_cuadrado( datos, numero_datos ), constante( datos, numero_datos ) ] )
     else
@@ -41,7 +42,7 @@ const computeResult = () => {
     polinomio.innerText = 'Funcion: ' + fun.toString();
     if( valores.value.length > 0 ){
         let resultado = 'Consultas: ';
-        for( const consulta of getValues() ) resultado += fun.evaluar( consulta ) + '  ';
+        for( const consulta of getValues() ) resultado += numberStyle.format( fun.evaluar( consulta ) ) + '  ';
         consultas.innerText = resultado;
     }
     else consultas.innerText = '';

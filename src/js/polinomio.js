@@ -33,11 +33,12 @@ export class Polinomio{
         let potencia = ( this.coeficientes.length - 1 ),
             resultado = '',
             super_indices = [ '²', '³', '⁴' ];
+        const numberStyle = new Intl.NumberFormat( 'es-MX', { style: 'decimal', maximumFractionDigits: 4 } );
         for ( let index  = 0 ; index<this.coeficientes.length ; index++ ){
             let coeficiente = this.coeficientes[ index ];
             if( coeficiente != 0.0 ){
                 let signo = ( index == 0 && coeficiente > 0 ) ? '' : ( coeficiente > 0 ) ? '+' : '-',
-                    constante = ( Math.abs( coeficiente ) != 1.0 ) ? Math.abs( coeficiente ) : '',
+                    constante = ( Math.abs( coeficiente ) != 1.0 ) ? numberStyle.format( Math.abs( coeficiente ) ) : '',
                     incognita = ( ( potencia - index ) > 1 ) ? `x${ super_indices[ potencia - index - 2 ] }` : 
                                 ( ( potencia - index ) == 1 ) ? 'x' : '';
                 resultado += `${ signo } ${ constante }${ incognita } `;
