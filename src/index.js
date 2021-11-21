@@ -39,7 +39,7 @@ const computeResult = () => {
         fun = new Polinomio( [ term_cuadrado_cubo( datos, numero_datos ), term_lineal_cuadrado( datos, numero_datos ), constante( datos, numero_datos ) ] )
     else
         fun = new Polinomio( [ term_cuadrado_cubo( datos, numero_datos ), term_lineal_cuadrado( datos, numero_datos ), lineal( datos, numero_datos ), constante( datos, numero_datos ) ] )
-    polinomio.innerText = 'Funcion: ' + fun.toString();
+    polinomio.innerText = 'Función: ' + fun.toString();
     if( valores.value.length > 0 ){
         let resultado = 'Consultas: ';
         for( const consulta of getValues() ) resultado += numberStyle.format( fun.evaluar( consulta ) ) + '  ';
@@ -55,8 +55,8 @@ const cleanFields = () => {
     const fields = document.querySelectorAll( 'input[type="number"]' );
     for (const field of fields) field.value = '';
     valores.value = '';
-    polinomio.innerText = '';
-    consultas.innerText = '';
+    polinomio.innerText = 'Función:';
+    consultas.innerText = 'Consultas:';
 };
 
 /**

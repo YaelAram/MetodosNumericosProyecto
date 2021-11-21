@@ -8,26 +8,31 @@ h1, p, input, li, select{
     line-height: 1.5;
 }
 
-h3{
-    margin-block-start: 0;
-}
-
 p{
     font-size: 1.4rem;
+    margin-block-start: 1rem;
+    margin-block-end: 0;
 }
 
-li{
+li, .t1, .t2, .t3{
     font-size: 1.2rem;
+}
+
+a, input[type="button"]{
+    font-weight: 700;
 }
 
 a{
     text-decoration: none;
-    color: blue;
+    color: #E9A6A6;
 }
 
-a:hover {
-    text-decoration:none; 
-    cursor:pointer;  
+a:hover, input[type="button"]:hover{
+    cursor:pointer;
+}
+
+a:hover{
+    text-decoration:none;
 }
 
 input[type="number"]{
@@ -39,21 +44,23 @@ input[type="number"], input[type="button"], .valores, select{
     border-radius: 5px;
 }
 
-input[type="number"], .valores{
+input[type="number"], .valores, select{
+    border-color: #864879;
     border-style: solid;
+    border-width: 2px;
+}
+
+input[type="number"], .valores{
     padding: 0.2rem 0.8rem;
 }
 
 input[type="button"]{
     padding: 0.4rem 0.5rem;
     border-style: none;
-    color: white;
-    font-weight: 700;
 }
 
 input[type="button"]:hover{
     opacity: 0.8;
-    cursor: pointer;
 }
 
 input::-webkit-outer-spin-button,
@@ -62,42 +69,47 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-header{
+header, footer{
+    background-color: #1F1D36;
+}
+
+header, main{
     padding: 1rem 2rem;
 }
 
-main{
-    padding: 1rem 2rem;
+main, .selector, .x, .y, .resultados, footer{
     display: grid;
+}
+
+main, .selector{
     grid-template-columns: repeat( 12, 1fr );
+}
+
+main, .resultados{
     gap: 8px;
 }
 
-h1{
-    grid-column: 1 / 13;
-    grid-row: 1;
-    text-align: center;
-    font-size: 2.5rem;
+h1, h3, .t1, .t2, .t3{
     margin-block-start: 0;
+}
+
+h1{
+    grid-row: 1;
+    font-size: 2.5rem;
     margin-block-end: 0.2em;
 }
 
-.instructions{
+h1, .instructions, .selector, .titulo_tabla, .x, .y, .resultados{
     grid-column: 1 / 13;
+}
+
+.instructions{
     grid-row: 1;
 }
 
 .selector{
-    grid-column: 1 / 13;
     grid-row: 2;
-    display: grid;
-    grid-template-columns: repeat( 12, 1fr );
     gap: 12px;
-}
-
-p{
-    margin-block-start: 1rem;
-    margin-block-end: 0;
 }
 
 .opcion_label, .consultas_label{
@@ -126,35 +138,31 @@ select{
 
 .compute{
     grid-column: 9;
-    background-color: #125C13;
+    background-color: #3F3351;
 }
 
 .clean{
     grid-column: 10;
-    background-color: #316B83;
+    background-color: #864879;
 }
 
 .titulo_tabla{
     margin-top: 1.5rem;
-    grid-column: 1 / 13;
     grid-row: 3;
 }
 
-.x{
-    grid-column: 1 / 13;
-    grid-row: 4;
-    display: grid;
+footer, .x, .y{
     grid-template-columns: repeat( 5, 1fr );
     gap: 24px;
+}
+
+.x{
+    grid-row: 4;
 }
 
 .y{
     margin-top: 1.2rem;
-    grid-column: 1 / 13;
     grid-row: 5;
-    display: grid;
-    grid-template-columns: repeat( 5, 1fr );
-    gap: 24px;
 }
 
 .x1, .y1{
@@ -174,11 +182,8 @@ select{
 }
 
 .resultados{
-    grid-column: 1 / 13;
     grid-row: 6;
-    display: grid;
     grid-template-columns: 1fr;
-    gap: 8px;
 }
 
 .polinomio, .consultas{
@@ -196,22 +201,20 @@ select{
 footer{
     margin-top: 2rem;
     padding: 1rem 2rem 1.5rem 2rem;
-    display: grid;
-    grid-template-columns: repeat( 5, 1fr );
-    gap: 12px;
+}
+
+h1, input[type="button"], .final_title, .t1, .t2, .t3, .bug_report{
+    text-align: center;
+    color: white;
 }
 
 .final_title{
     grid-column: 1 / 6;
     grid-row: 1;
-    text-align: center;
 }
 
 .t1, .t2, .t3{
     grid-row: 2;
-    font-size: 1.2rem;
-    text-align: center;
-    margin-block-start: 0;
 }
 
 .t1{
@@ -229,5 +232,4 @@ footer{
 .bug_report{
     grid-column: 2 / 5;
     grid-row: 3;
-    text-align: center;
 }
