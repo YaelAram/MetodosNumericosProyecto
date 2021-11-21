@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yael Castillo">
+    <meta name="description" content="Conversor de la representación binaria de punto flotante a su representación decimal">
+    <link rel="stylesheet" href="./assets/normalize-min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
+    <title>Proyecto</title>
+</head>
+<body>
+    <main>
+        <h1>Interpolación por Polinomio de Lagrange</h1>
+        <section class="selector">
+            <p class="opcion_label">Selecciona una opción:</p>
+            <p class="consultas_label">Consultas:</p>
+            <select name="mode" class="mode">
+                <option value="3" selected>Tabla con 3 registros</option>
+                <option value="4">Tabla con 4 registros</option>
+            </select>
+            <input type="text" class="valores" placeholder="1 2 3 4 5 6">
+            <input type="button" value="Calcular" class="compute">
+            <input type="button" value="Limpiar" class="clean">
+        </section>
+        <p class="titulo_tabla">Tabla de Registros: </p>
+        <section class="x">
+            <input type="number" class="x1" placeholder="Valor x1">
+            <input type="number" class="x2" placeholder="Valor x2">
+            <input type="number" class="x3" placeholder="Valor x3">
+        </section>
+        <section class="y">
+            <input type="number" class="y1" placeholder="Valor y1">
+            <input type="number" class="y2" placeholder="Valor y2">
+            <input type="number" class="y3" placeholder="Valor y3">
+        </section>
+        <section class="resultados">
+            <p class="polinomio"></p>
+            <p class="consultas"></p>
+        </section>
+    </main>
+</body>
+</html>
